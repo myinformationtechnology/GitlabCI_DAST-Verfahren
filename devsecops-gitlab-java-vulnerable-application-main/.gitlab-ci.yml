@@ -1,0 +1,7 @@
+stages:
+    - echoPrintText
+
+print-text-job:
+    stage: echoPrintText
+    script:
+        - echo "Das ist eine Datei bezüglich des Hochschulprojekts"
