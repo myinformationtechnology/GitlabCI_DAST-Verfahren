@@ -1,4 +1,4 @@
-[...]
+
 stages:
     - runDASTScanUsingZAP
 
@@ -16,4 +16,4 @@ run-dast-job:
     artifacts:
       paths:
         - zap_report.html
-[...]
+
