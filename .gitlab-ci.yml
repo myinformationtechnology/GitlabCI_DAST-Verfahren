@@ -19,7 +19,7 @@ run-sast-job:
     stage: runSASTScanUsingSonarCloud
     image: maven:3.8.5-openjdk-11-slim
     script: |
-      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=gitlabdevsecopsintegrationkey -Dsonar.projectKey=gitlabdevsecopsintegrationkey -Dsonar.login=9ff892826b54980437f4fb0fbc72f4049ec97585 
+      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=gitlabdevsecopscicdehsan -Dsonar.projectKey=gitlabdevsecopscicdehsan -Dsonar.login=2150e3195d38d95f69e8cd48ad3a9f568a9d5b71 
 
 run-sca-job:
     stage: runSCAScanUsingSnyk
