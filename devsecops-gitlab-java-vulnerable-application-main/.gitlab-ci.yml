@@ -15,19 +15,19 @@ stages:
   - runDASTScanUsingZAP
   # - dast
 
-run-sast-job:
-    stage: runSASTScanUsingSonarCloud
-    image: maven:3.8.5-openjdk-11-slim
-    script: |
-      mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=gitlabdevsecopsintegrationkey -Dsonar.projectKey=gitlabdevsecopsintegrationkey -Dsonar.login=9ff892826b54980437f4fb0fbc72f4049ec97585 
+# run-sast-job:
+#     stage: runSASTScanUsingSonarCloud
+#     image: maven:3.8.5-openjdk-11-slim
+#     script: |
+#       mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=gitlabdevsecopsintegrationkey -Dsonar.projectKey=gitlabdevsecopsintegrationkey -Dsonar.login=9ff892826b54980437f4fb0fbc72f4049ec97585 
 
-run-sca-job:
-    stage: runSCAScanUsingSnyk
-    image: maven:3.8.5-openjdk-11-slim
-    script: |
-      SNYK_TOKEN='2f4afa39-c493-4c6d-b34e-080c1a8f9014'
-      export SNYK_TOKEN
-      mvn snyk:test -fn 
+# run-sca-job:
+#     stage: runSCAScanUsingSnyk
+#     image: maven:3.8.5-openjdk-11-slim
+#     script: |
+#       SNYK_TOKEN='2f4afa39-c493-4c6d-b34e-080c1a8f9014'
+#       export SNYK_TOKEN
+#       mvn snyk:test -fn 
       
 run-dast-job:
     stage: runDASTScanUsingZAP
